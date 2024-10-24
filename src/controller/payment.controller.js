@@ -29,7 +29,7 @@ const generateQR = async (req, res) => {
       },
       {
         model: Vendor,
-        attributes: ["vendor_name", "image", "open", "phone_number"],
+        attributes: ["vendor_name", "image", "open", "phone_number","prompt_pay"],
       },
     ],
     order: [
