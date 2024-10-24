@@ -17,7 +17,7 @@ const getAllReports = async (req, res) => {
     include: [
       {
         model: Customer,
-        attributes: ["id", "username", "fname", "lname"],
+        attributes: ["id", "username", "fname", "lname", "phone_number"],
       },
     ],
   });

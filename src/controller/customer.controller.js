@@ -9,8 +9,8 @@ import { Op } from "sequelize";
 dotenv.config();
 
 const register = async (req, res) => {
-  const { username, email, password, fname, lname } = req.body;
-  if (!username || !email || !password || !fname || !lname) {
+  const { username, email, password, fname, lname, phone_number } = req.body;
+  if (!username || !email || !password || !fname || !lname || !phone_number) {
     return res.status(400).json({ msg: "กรุณากรอกข้อมูลให้ครบถ้วน" });
   }
 
@@ -53,6 +53,7 @@ const register = async (req, res) => {
       fname,
       lname,
       password: encodedPassword,
+      phone_number,
     });
     return res
       .status(200)
